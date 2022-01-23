@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  font-size: 18px;
+}
+
+.blue {
+  color: steelblue;
+}
+
+.orange {
+  color: #ffe082;
+}
+
+.red {
+  color: #ff0000;
+}
+
+.green {
+  color: #008e3c;
+}

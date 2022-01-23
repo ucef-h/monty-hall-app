@@ -1,0 +1,30 @@
+<p-dialog
+  [(visible)]="dialogService.isVisible"
+  [dismissableMask]="true"
+  [style]="{width: '350px', minWidth: '200px', zIndex: 3000}"
+  [responsive]="true">
+  <ng-template pTemplate="header">
+    <h4 class="text-center w-100 mt-2">
+      <i class="pi float-left " [style.fontSize]="'1rem'" [ngClass]="
+         {
+           'pi-info-circle blue': dialogService.alertType === 'info',
+           'pi-exclamation-triangle orange': dialogService.alertType === 'warning',
+           'pi-times-circle red': dialogService.alertType === 'error',
+           'pi-check-circle green': dialogService.alertType === 'success'
+         }"></i>
+      {{dialogService.header}}
+    </h4>
+  </ng-template>
+  <div>
+    <h5>
+      {{dialogService.message}}
+    </h5>
+  </div>
+  <p-footer class="d-md-flex">
+    <button *ngFor="let b of dialogService.buttons" pButton
+            type="button" class="w-100 my-2"  [label]="b.text"
+            (click)="!!b.callback?b.callback(): undefined;
+                       !!b.dismissOnClick?dialogService.hide():undefined">
+    </button>
+  </p-footer>
+</p-dialog>

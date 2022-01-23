@@ -1,0 +1,34 @@
+<div class="p-listbox">
+  <form [formGroup]="form" (ngSubmit)="submitForm()">
+    <div class="div-input p-2">
+      <label for="numberOfGames">Number of Games</label>
+      <input
+        id="numberOfGames"
+        name="numberOfGames"
+        class="mt-2"
+        formControlName="numberOfGames"
+        type="number"
+        min="0"
+        pInputText>
+    </div>
+    <div class=" p-2">
+      <label for="numberOfGames">Switch door after reveal</label>
+      <p-checkbox
+        id="switchDoor"
+        name="switchDoor"
+        inputId="switchDoor"
+        class="mx-2"
+        formControlName="switchDoor"
+        [binary]="true">
+      </p-checkbox>
+    </div>
+    <div class="d-flex div-buttons p-2">
+      <div class="p-2">
+        <button id="submitMontyForm" type="submit" label="Submit" pButton></button>
+      </div>
+      <div class="p-2">
+        <button id="resetMontyForm" type="button" label="Cancel" (click)="resetForm()" pButton></button>
+      </div>
+    </div>
+  </form>
+</div>

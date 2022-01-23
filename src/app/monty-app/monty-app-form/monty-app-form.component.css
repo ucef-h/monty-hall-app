@@ -1,0 +1,15 @@
+:host {
+  display: contents;
+}
+
+.div-input label {
+  display: block;
+}
+
+.div-input input {
+  height: 25px;
+}
+
+.div-buttons button {
+  height: 30px;
+}

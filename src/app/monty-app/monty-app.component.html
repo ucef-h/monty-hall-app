@@ -1,0 +1,8 @@
+<div class="container d-md-flex justify-content-between">
+  <div class="px-2 py-4">
+    <app-monty-app-form (formSubmit)="requestMontyGame($event)"></app-monty-app-form>
+  </div>
+  <div class="px-2 py-4 w-100">
+    <app-monty-app-list [list]="results |async"></app-monty-app-list>
+  </div>
+</div>

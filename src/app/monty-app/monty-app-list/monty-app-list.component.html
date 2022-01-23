@@ -1,0 +1,21 @@
+<div class="w-100">
+  <div *ngIf="list else noListTemplate">
+    <p-listbox [options]="list" styleClass="flex-row-reverse">
+      <ng-template let-item pTemplate="item">
+        <div class="w-100">
+          <b>Number of Games:</b> {{item.playCount}} <br>
+          <b>Strategy Chosed:</b> {{item.switchDoor ? 'Switch Door' : 'Keep Door'}} <br>
+        </div>
+        <div class="w-100">
+          <b>Probability:</b> {{item.probabilityOfWinning}} <br>
+          <b>Games Won:</b> {{item.winCount}} <br>
+        </div>
+      </ng-template>
+
+    </p-listbox>
+  </div>
+
+  <ng-template #noListTemplate>
+    No data
+  </ng-template>
+</div>
