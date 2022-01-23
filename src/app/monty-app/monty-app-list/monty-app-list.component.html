@@ -4,7 +4,7 @@
       <ng-template let-item pTemplate="item">
         <div class="w-100">
           <b>Number of Games:</b> {{item.playCount}} <br>
-          <b>Strategy Chosed:</b> {{item.switchDoor ? 'Switch Door' : 'Keep Door'}} <br>
+          <b>Strategy Chosed:</b> {{item.playerStrategy.id === 1 ? 'Switch Door' : 'Keep Door'}} <br>
         </div>
         <div class="w-100">
           <b>Probability:</b> {{item.probabilityOfWinning}} <br>
